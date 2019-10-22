@@ -27,22 +27,25 @@ for i in range(n):
         if arr[j] > arr[j + 1]:
             arr[j], arr[j + 1] = arr[j + 1], arr[j]
 '''
-
+#os使用使用
 print(os.getcwd())
 path = os.path.dirname(os.path.dirname(__file__))
 report_path = os.path.join(path,'report')
 print(report_path)
+print(dir(str))
 
 
+#random
 print(random.randint(0,100))
 
-print(time.localtime())
 
+#time时间戳
+print(time.localtime())
 s = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
 print(s)
 
-print(dir(str))
 
+#字符串拼接与分割
 str1 = ['1','2','3','4']
 
 str2 = '_ '.join(str1)
@@ -53,6 +56,7 @@ str4 = str3.split('_')
 print(str4)
 
 
+#字典
 dict1 = {'name':'wangsan','age':'15'}
 print(dict1.get('name'))
 
@@ -64,6 +68,7 @@ dict1.update(dict2)
 print(dict1)
 
 
+#装饰器
 def BBB(func):
     def inner():
         print("出版社")
@@ -74,10 +79,6 @@ def AAA():
     print("hello world")
 
 AAA()
-
-
-''''''
-
 
 def login(func):
     def inner(token):
@@ -95,24 +96,15 @@ def info(token):
 
 info('1234567')
 
-
+#动态参数
 # def func(*args,**kwargs)
 
-
+#map函数
 def fn(a):
     return a + 100
 
 list1 = {1, 2, 3, 4}
 print(list(map(fn,list1)))
-
-
-
-print('111')
-
-print("2222")
-
-
-print("2333")
 
 
 def encryptDes(str):
